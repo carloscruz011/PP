@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <link>//localhost:1313/</link>
+    <description>Recent content on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 30 Apr 2026 01:04:37 -0700</lastBuildDate>
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Practica4: Paradigma Logico</title>
+      <link>//localhost:1313/practica4/</link>
+      <pubDate>Thu, 30 Apr 2026 01:04:37 -0700</pubDate>
+      <guid>//localhost:1313/practica4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Practica3: Paradigma Funcional</title>
+      <link>//localhost:1313/practica3/</link>
+      <pubDate>Thu, 30 Apr 2026 01:04:30 -0700</pubDate>
+      <guid>//localhost:1313/practica3/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Practica2: Programacion Orientada Objetos</title>
+      <link>//localhost:1313/practica2/</link>
+      <pubDate>Thu, 30 Apr 2026 01:04:23 -0700</pubDate>
+      <guid>//localhost:1313/practica2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Practica1:Elementos basicos de los lenguajes de programación</title>
+      <link>//localhost:1313/practica1/</link>
+      <pubDate>Thu, 30 Apr 2026 01:03:12 -0700</pubDate>
+      <guid>//localhost:1313/practica1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Practica0:Practica 0</title>
+      <link>//localhost:1313/practica0/</link>
+      <pubDate>Thu, 30 Apr 2026 01:01:09 -0700</pubDate>
+      <guid>//localhost:1313/practica0/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
