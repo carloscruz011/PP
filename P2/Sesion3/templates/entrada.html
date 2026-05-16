@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Registrar Entrada</h1>
+
+<div class="card">
+    {% if error %}
+        <div class="error">{{ error }}</div>
+    {% endif %}
+
+    <form method="POST" action="/entrada">
+        <label>Placa:</label>
+        <input type="text" name="placa" placeholder="Ej. ABC-123" required>
+
+        <label>Tipo de vehiculo:</label>
+        <select name="tipo">
+            <option value="Car">Auto</option>
+            <option value="Motorcycle">Moto</option>
+        </select>
+
+        <button type="submit" class="btn">Registrar Entrada</button>
+    </form>
+</div>
+
+<a href="/">Volver al Dashboard</a>
+{% endblock %}

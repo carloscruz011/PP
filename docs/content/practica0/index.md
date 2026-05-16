@@ -10,7 +10,7 @@ Markdown es un lenguaje de marcado que permite añadir formato a un texto simple
 
 ### Sintaxis
 
-<!-- Esto es un comentario -->
+<!-- Esto es un comentario --> 
 
 # Esto es un encabezado H1
 ## Esto es un encabezado H2

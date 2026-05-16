@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Registrar Salida</h1>
+
+<div class="card">
+    {% if error %}
+        <div class="error">{{ error }}</div>
+    {% endif %}
+
+    {% if tickets %}
+    <!-- Mostramos los tickets activos para que el usuario sepa que numeros hay -->
+    <h3>Tickets activos:</h3>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Vehiculo</th>
+            <th>Spot</th>
+        </tr>
+        {% for t in tickets %}
+        <tr>
+            <td>{{ t.get_ticket_id() }}</td>
+            <td>{{ t.get_vehicle() }}</td>
+            <td>{{ t.get_spot().get_spot_id() }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+
+    <form method="POST" action="/salida">
+        <label>Numero de ticket:</label>
+        <input type="number" name="ticket_id" min="1" required>
+
+        <label>Horas estacionado:</label>
+        <input type="number" name="hours" min="1" step="1" required>
+
+        <button type="submit" class="btn">Registrar Salida</button>
+    </form>
+
+    {% else %}
+        <p>No hay vehiculos estacionados actualmente.</p>
+    {% endif %}
+</div>
+
+<a href="/">Volver al Dashboard</a>
+{% endblock %}

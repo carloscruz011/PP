@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Dashboard</h1>
+
+<!-- Ocupacion -->
+<div class="card">
+    <h2>Ocupacion</h2>
+    <p>Total: {{ ocupacion.total }} &nbsp;|&nbsp;
+       <span class="libre">Libres: {{ ocupacion.free }}</span> &nbsp;|&nbsp;
+       <span class="ocupado">Ocupados: {{ ocupacion.occupied }}</span>
+    </p>
+    <p>Politica actual: {{ lot.get_policy().describe() }}</p>
+    <p>Total recaudado: ${{ lot.get_total_revenue() }}</p>
+</div>
+
+<!-- Spots -->
+<div class="card">
+    <h2>Estado de los spots</h2>
+    <table>
+        <tr>
+            <th>Spot</th>
+            <th>Tipo</th>
+            <th>Estado</th>
+        </tr>
+        {% for spot in lot.get_spots() %}
+        <tr>
+            <td>{{ spot.get_spot_id() }}</td>
+            <td>{{ spot.get_allowed_type() }}</td>
+            <td>
+                {% if spot.is_occupied() %}
+                    <span class="ocupado">Ocupado — {{ spot.get_current_vehicle() }}</span>
+                {% else %}
+                    <span class="libre">Libre</span>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<!-- Tickets activos -->
+<div class="card">
+    <h2>Tickets activos</h2>
+    {% if tickets %}
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Vehiculo</th>
+            <th>Spot</th>
+        </tr>
+        {% for t in tickets %}
+        <tr>
+            <td>{{ t.get_ticket_id() }}</td>
+            <td>{{ t.get_vehicle() }}</td>
+            <td>{{ t.get_spot().get_spot_id() }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+        <p>No hay vehiculos estacionados.</p>
+    {% endif %}
+</div>
+
+<a href="/entrada" class="btn">Registrar Entrada</a>
+&nbsp;
+<a href="/salida" class="btn">Registrar Salida</a>
+{% endblock %}
