@@ -8,7 +8,7 @@ title = 'Practica4: Paradigma Logico'
 **Docente**: Jose Carlos Gallegos Mariscal <br>
 **Alumno**: Carlos David Cruz Santiesteban <br>
 **Matricula**: 379909
-# <center>Practica 3: Paradigma funcional</center>
+# <center>Practica 4: Paradigma Logico</center>
 ## 1. Introducción
 
 ### 1.1 Objetivo
