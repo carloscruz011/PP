@@ -1,1 +1,7 @@
+baseURL = 'https://carloscruz011.github.io/PP/'
+languageCode = 'es-mx'
+title = 'Mis Prácticas de Paradigmas'
 theme = 'ananke'
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
