@@ -5,7 +5,3 @@ theme = 'ananke'
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
-
-[params]
-  # CRÍTICO: Esto le dice a Ananke que muestre tus carpetas de prácticas en el inicio
-  mainSections = ["practica0", "practica1", "practica2", "practica3", "practica4"]
